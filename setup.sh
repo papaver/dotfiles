@@ -4,6 +4,11 @@
 DOTFILES="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 #
+# setup aliases
+#
+ln -s ${DOTFILES}/.aliases ~/.aliases
+
+#
 # setup vim
 #
 ln -s ${DOTFILES}/.vimrc ~/.vimrc

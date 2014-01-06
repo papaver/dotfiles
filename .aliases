@@ -1,0 +1,66 @@
+# vi: set ft=sh :
+#-------------------------------------------------------------------------------
+# aliases
+#-------------------------------------------------------------------------------
+
+# - navigation -
+alias u='cd ..'
+alias uu='cd ../..'
+alias uuu='cd ../../..'
+alias www='cd /var/www'
+
+# - command overrides -
+alias cp='cp -iv'
+alias crontab='EDITOR=vi crontab'
+alias df='df -h'
+alias grep='grep --color=auto -i'
+alias h='history'
+alias j='jobs'
+alias mv='mv -iv'
+alias rm='rm -i'
+
+# - commands -
+alias check_proc='ps -ef | grep \!1 | awk -F" " '"'"'{ print $2" "$9 }'"'"
+
+#-------------------------------------------------------------------------------
+# os specific (mac/linux have few different flags for native utilities)
+#-------------------------------------------------------------------------------
+
+export PLATFORM=`uname`
+
+# Mac Osx
+if [ "${PLATFORM}" == "Darwin" ]; then
+
+    # - listings -
+    alias ls='ls -FG'
+    alias ll='ls -aoFGh'
+
+    # - command overrides -
+    alias readelf='readelf -a -W elffile'
+
+    # - commands -
+    alias restartapache='sudo apachectl restart'
+    alias restartmysql='echo "sorry, alias not available..."'
+
+
+# Linux
+else
+
+    # - listings -
+    alias dir='dir -F --color=auto'
+    alias ls='ls -F --color=auto'
+    alias ll='ls -aoFh --color=auto'
+
+    # - commands -
+    alias restartapache='sudo /etc/init.d/apache2 restart'
+    alias restartmysql='sudo /etc/init.d/mysql restart'
+
+fi
+
+#-------------------------------------------------------------------------------
+# load local aliases
+#-------------------------------------------------------------------------------
+
+if [ -f ~/.aliases_local ]; then
+    source ~/.aliases_local
+fi
