@@ -8,6 +8,9 @@
 DOTFILES="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 echo "Installing dotfiles from ${DOTFILES}..."
 
+# grab platform
+export PLATFORM=`uname`
+
 #------------------------------------------------------------------------------
 # functions
 #------------------------------------------------------------------------------
@@ -26,7 +29,11 @@ install_file_link()
 install_dir_link()
 {
     if ([ -h ~/$1 ] || [ ! -d ~/$1 ]) then
-        ln -fhs ${DOTFILES}/$1 ~/$1
+        if [ "${PLATFORM}" == "Darwin" ]; then
+            ln -fhs ${DOTFILES}/$1 ~/$1
+        else
+            ln -fns ${DOTFILES}/$1 ~/$1
+        fi
     else
         echo "  - skipping $1 already exists..."
     fi
