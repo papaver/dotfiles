@@ -19,3 +19,8 @@ mkdir ~/.vimswap
 # setup git
 #
 ln -s ${DOTFILES}/.gitconfig ~/.gitconfig
+
+#
+# setup tmux
+#
+ln -s ${DOTFILES}/.tmux.conf ~/.tmux.conf
