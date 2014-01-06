@@ -70,3 +70,23 @@ install_file_link ".gitconfig"
 #
 echo "Configuring tmux..."
 install_file_link ".tmux.conf"
+
+#-------------------------------------------------------------------------------
+# os specific dot file installs
+#-------------------------------------------------------------------------------
+
+# Mac Osx
+if [ "${PLATFORM}" == "Darwin" ]; then
+
+    echo ""
+
+# Linux
+else
+
+    #
+    # setup dircolors
+    #
+    echo "Configuring dircolors..."
+    install_file_link ".dircolors"
+
+fi
