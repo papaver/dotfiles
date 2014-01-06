@@ -1,0 +1,12 @@
+[color]
+	ui = true
+[alias]
+	s = status -s
+	b = branch
+	ifuckedup = commit --amend
+	l = log --oneline -n 20
+	lsd = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	vdiff = difftool --tool=vimdiff
+[user]
+	name = Moiz Merchant
+	email = moiz@electronicdreams

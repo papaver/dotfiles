@@ -14,3 +14,8 @@ ln -s ${DOTFILES}/.aliases ~/.aliases
 ln -s ${DOTFILES}/.vimrc ~/.vimrc
 ln -s ${DOTFILES}/.vim ~/.vim
 mkdir ~/.vimswap
+
+#
+# setup git
+#
+ln -s ${DOTFILES}/.gitconfig ~/.gitconfig
