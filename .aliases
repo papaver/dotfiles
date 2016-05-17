@@ -21,6 +21,7 @@ alias rm='rm -i'
 
 # - commands -
 alias check_proc='ps -ef | grep \!1 | awk -F" " '"'"'{ print $2" "$9 }'"'"
+alias git_rm_merged_branches='git branch --merged origin/master  | grep -v '"'"^*"'"' | xargs git branch -d'
 
 #-------------------------------------------------------------------------------
 # os specific (mac/linux have few different flags for native utilities)
