@@ -11,3 +11,5 @@
 [user]
 	name = Moiz Merchant
 	email = moiz@electronicdreams
+[push]
+    default = current
