@@ -45,6 +45,7 @@ autocmd BufNewFile,BufRead *.m set ft=objc
 autocmd BufNewFile,BufRead *.as set filetype=actionscript 
 autocmd BufNewFile,BufRead *.mxml set filetype=mxml
 autocmd BufNewFile,BufRead *.mako set filetype=mako
+autocmd BufNewFile,BufRead *.shader set filetype=cg
 
 "------------------------------------------------------------------------------
 " text settings
