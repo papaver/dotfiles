@@ -15,6 +15,11 @@ let g:alternateExtensions_m = "h"
 " solarized
 let g:solarized_menu=0
 
+" map fugitive commands for easy access
+:nnoremap <leader>g :ccl<cr>:silent Ggrep! <cword><cr>:redraw!<cr>
+:vnoremap <leader>g y:ccl<cr>:silent Ggrep! <c-r>"<cr>:redraw!<cr>
+:vnoremap <leader>* y/<c-r>"<cr>
+
 "------------------------------------------------------------------------------
 " tab settings
 "------------------------------------------------------------------------------
@@ -63,6 +68,9 @@ set dir=~/.vimswap " set swap directory
 "------------------------------------------------------------------------------
 " code settings
 "------------------------------------------------------------------------------
+
+" auto open quick fix window on grep
+autocmd QuickFixCmdPost *grep* cwindow
 
 "------------------------------------------------------------------------------
 " misc settings
