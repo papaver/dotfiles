@@ -10,7 +10,7 @@ let b:did_indent = 1
 runtime! indent/html.vim
 runtime! indent/html5.vim
 
-setlocal autoindent sw=4 noet
+setlocal autoindent sw=2 noet
 setlocal indentexpr=GetPlay2HtmlIndent()
 setlocal indentkeys=*,},<Return>
 
