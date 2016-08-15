@@ -73,6 +73,33 @@ set dir=~/.vimswap " set swap directory
 autocmd QuickFixCmdPost *grep* cwindow
 
 "------------------------------------------------------------------------------
+" clojure settings
+"------------------------------------------------------------------------------
+
+let g:rbpt_colorpairs = [
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['red',         'firebrick3'],
+    \ ['brown',       'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ]
+
+au BufEnter *.clj RainbowParenthesesActivate
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+"------------------------------------------------------------------------------
 " misc settings
 "------------------------------------------------------------------------------
 
