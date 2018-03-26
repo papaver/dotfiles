@@ -10,7 +10,7 @@
 	ignorelocal = git update-index --assume-unchanged
 [user]
 	name = Moiz Merchant
-	email = moiz@electronicdreams
+	email = moiz@electronicdreams.io
 [push]
     default = current
 [filter "lfs"]
