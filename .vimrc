@@ -104,8 +104,9 @@ autocmd QuickFixCmdPost *grep* cwindow
 " misc settings
 "------------------------------------------------------------------------------
 
-set nu       " line numbers
-set hlsearch " highlight search
+set nu        " line numbers
+set hlsearch  " highlight search
+set incsearch " highlight next match
 
 " status bar
 set laststatus=2
