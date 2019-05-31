@@ -112,6 +112,10 @@ set incsearch " highlight next match
 set laststatus=2
 set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
+" esc for new macbook ;|
+inoremap kj <Esc>
+vnoremap kj <Esc>
+
 "------------------------------------------------------------------------------
 " commands
 "------------------------------------------------------------------------------
