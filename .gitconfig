@@ -5,6 +5,7 @@
 	b = branch
 	ifuckedup = commit --amend
 	l = log --oneline -n 20
+	lf = diff-tree --no-commit-id --name-only -r
 	lsd = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	vdiff = difftool --tool=vimdiff
 	ignorelocal = git update-index --assume-unchanged
@@ -13,9 +14,20 @@
 	email = moiz@electronicdreams.io
 [push]
     default = current
+[core]
+    editor = vim
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	required = true
-[core]
-    editor = vim
+	process = git-lfs filter-process
+[http]
+	sslVersion = tlsv1.2
+	sslbackend = openssl
+
+# notes
+
+# git rebase HEAD~2 --onto unityAvatarDemo unity-demo-work
+#   take current branches last two commits and rebase that off off unityAvatarDemo into unity-demo-work
+#   this essencially rebases only x commits over
+
