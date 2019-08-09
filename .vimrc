@@ -47,6 +47,7 @@ hi LineNr ctermbg=black
 autocmd BufNewFile,BufRead *.frag,*.vert,*.fp,*.vp,*.glsl,*.vsh,*.fsh set ft=glsl
 autocmd BufNewFile,BufRead *.sdl set ft=sl
 autocmd BufNewFile,BufRead *.m set ft=objc
+autocmd BufNewFile,BufRead *.mm set ft=objc
 autocmd BufNewFile,BufRead *.as set filetype=actionscript 
 autocmd BufNewFile,BufRead *.mxml set filetype=mxml
 autocmd BufNewFile,BufRead *.mako set filetype=mako
