@@ -23,8 +23,9 @@ alias rm='rm -i'
 alias check_proc='ps -ef | grep \!1 | awk -F" " '"'"'{ print $2" "$9 }'"'"
 alias git_rm_merged_branches='git branch --merged origin/master  | grep -v '"'"^*"'"' | xargs git branch -d'
 alias rm_ds='find . | grep .DS_Store | xargs rm'
-alias mhelp='more Makefile | grep ":" | awk -F":" '"'"'{print $1}'"'"' | sort'
+alias mhelp='more Makefile | grep ":$" | awk -F":" '"'"'{print $1}'"'"' | sort'
 alias git_add_d='git s | grep " D" | awk -F" " '"'"'{print $2}'"'"' | xargs git rm'
+alias ls_devices='ffmpeg -f avfoundation -list_devices true -i "" 2>&1 | grep "input device"'
 
 #-------------------------------------------------------------------------------
 # os specific (mac/linux have few different flags for native utilities)
