@@ -71,6 +71,12 @@ install_file_link ".gitconfig"
 echo "Configuring tmux..."
 install_file_link ".tmux.conf"
 
+#
+# setup bash
+#
+echo "Configuring bash..."
+install_file_link ".bashrc"
+
 #-------------------------------------------------------------------------------
 # os specific dot file installs
 #-------------------------------------------------------------------------------
