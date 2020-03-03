@@ -51,3 +51,7 @@ export EDITOR=vim
 
 PATH="~/.bin:${PATH}"
 export PATH
+
+#- aliases --------------------------------------------------------------------
+
+source ~/.aliases
