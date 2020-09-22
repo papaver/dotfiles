@@ -9,6 +9,7 @@
 	lsd = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	vdiff = difftool --tool=vimdiff
 	ignorelocal = git update-index --assume-unchanged
+    stat = show --stat
 [user]
 	name = Moiz Merchant
 	email = moiz@electronicdreams.io
@@ -27,7 +28,18 @@
 
 # notes
 
-# git rebase HEAD~2 --onto unityAvatarDemo unity-demo-work
-#   take current branches last two commits and rebase that off off unityAvatarDemo into unity-demo-work
-#   this essencially rebases only x commits over
-
+# git rebase HEAD~4 --onto master
+#   will rebase 4 top commits of the current branch and rebase it on top of master
+#
+#   a   b   c
+#   o---o---o - master
+#        \
+#         o---o---o---o - work
+#         d   e   f   g
+#
+#
+#   a   b   c   d   e   f   g
+#   o---o---o---o---o---o---o - work
+#           |
+#         master
+#
