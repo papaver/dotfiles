@@ -3,6 +3,10 @@
 # aliases
 #-------------------------------------------------------------------------------
 
+#-------------------------------------------------------------------------------
+# aliases
+#-------------------------------------------------------------------------------
+
 # - navigation -
 alias u='cd ..'
 alias uu='cd ../..'
@@ -26,6 +30,9 @@ alias rm_ds='find . | grep .DS_Store | xargs rm'
 alias mhelp='more Makefile | grep ":$" | awk -F":" '"'"'{print $1}'"'"' | sort'
 alias git_add_d='git s | grep " D" | awk -F" " '"'"'{print $2}'"'"' | xargs git rm'
 alias ls_devices='ffmpeg -f avfoundation -list_devices true -i "" 2>&1 | grep "input device"'
+
+# - misc -
+alias tmux-colors='for i in {0..255}; do pRintf "\x1b[38;5;${i}mcolour${i}\x1b[0m\n"; done'
 
 #-------------------------------------------------------------------------------
 # os specific (mac/linux have few different flags for native utilities)
