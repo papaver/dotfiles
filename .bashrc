@@ -14,14 +14,14 @@ if test -t 1; then
     # reset
     bpReset='\[\033[00m\]'
 
-    bpBlack='\[\033[2;30m\]'  # Black
-    bpRed='\[\033[2;31m\]'    # Red
-    bpGreen='\[\033[2;32m\]'  # Green
-    bpYellow='\[\033[2;33m\]' # Yellow
-    bpBlue='\[\033[2;34m\]'   # Blue
-    bpPurple='\[\033[2;35m\]' # Purple
-    bpCyan='\[\033[2;36m\]'   # Cyan
-    bpWhite='\[\033[2;37m\]'  # White
+    bpBlack='\[\033[0;30m\]'  # Black
+    bpRed='\[\033[0;31m\]'    # Red
+    bpGreen='\[\033[0;32m\]'  # Green
+    bpYellow='\[\033[0;33m\]' # Yellow
+    bpBlue='\[\033[0;34m\]'   # Blue
+    bpPurple='\[\033[0;35m\]' # Purple
+    bpCyan='\[\033[0;36m\]'   # Cyan
+    bpWhite='\[\033[0;37m\]'  # White
 
 fi
 
