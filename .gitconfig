@@ -10,6 +10,7 @@
 	vdiff = difftool --tool=vimdiff
 	ignorelocal = git update-index --assume-unchanged
     stat = show --stat
+    prune-remote-branches = remote prune origin
 [user]
 	name = Moiz Merchant
 	email = moiz@electronicdreams.io
@@ -24,7 +25,7 @@
 	process = git-lfs filter-process
 [http]
 	sslVersion = tlsv1.2
-	sslbackend = openssl
+	sslBackend = openssl
 
 # notes
 
