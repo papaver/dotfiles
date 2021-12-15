@@ -53,6 +53,7 @@ autocmd BufNewFile,BufRead *.mxml set filetype=mxml
 autocmd BufNewFile,BufRead *.mako set filetype=mako
 autocmd BufNewFile,BufRead *.shader set filetype=cg
 autocmd BufNewFile,BufRead *.lss set filetype=less
+autocmd BufNewFile,BufRead *.swift set filetype=swift
 
 "------------------------------------------------------------------------------
 " text settings
@@ -73,6 +74,9 @@ set dir=~/.vimswap " set swap directory
 
 " auto open quick fix window on grep
 autocmd QuickFixCmdPost *grep* cwindow
+
+" auto format xml
+au FileType xml exe ":silent %!xmllint --format --recover - 2>/dev/null"
 
 "------------------------------------------------------------------------------
 " clojure settings
@@ -100,6 +104,20 @@ autocmd QuickFixCmdPost *grep* cwindow
 "au Syntax * RainbowParenthesesLoadRound
 "au Syntax * RainbowParenthesesLoadSquare
 "au Syntax * RainbowParenthesesLoadBraces
+
+"------------------------------------------------------------------------------
+" js settings
+"------------------------------------------------------------------------------
+
+au Filetype js setlocal tabstop=2 shiftwidth=2
+
+"------------------------------------------------------------------------------
+" swift settings
+"------------------------------------------------------------------------------
+
+"au Filetype swift map <C-I> :pyf bundle/swift/swift-indent.py<cr>
+"au Filetype swift imap <C-I> <c-o>:pyf bundle/swift/swift-indent.py<cr>
+au Filetype swift setlocal formatoptions+=cro
 
 "------------------------------------------------------------------------------
 " misc settings
