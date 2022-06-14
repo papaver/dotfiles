@@ -75,7 +75,7 @@ install_file_link ".tmux.conf"
 # setup bash
 #
 echo "Configuring bash..."
-install_file_link ".bashrc"
+install_file_link ".bash_profile"
 
 #-------------------------------------------------------------------------------
 # os specific dot file installs
