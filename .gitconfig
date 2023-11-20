@@ -11,6 +11,7 @@
 	ignorelocal = git update-index --assume-unchanged
     stat = show --stat
     prune-remote-branches = remote prune origin
+    merge-manual = merge --no-commit --no-ff
 [user]
 	name = Moiz Merchant
 	email = moiz@electronicdreams.io
@@ -44,3 +45,5 @@
 #           |
 #         master
 #
+[init]
+	defaultBranch = master
