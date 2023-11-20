@@ -66,7 +66,8 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 " file settings
 "------------------------------------------------------------------------------
 
-set dir=~/.vimswap " set swap directory
+set dir=~/.vimswap       " set swap directory
+set backupdir=~/.vimswap " set backup dir
 
 "------------------------------------------------------------------------------
 " code settings
